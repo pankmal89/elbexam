@@ -1,0 +1,9 @@
+---
+
+- hosts: balancers 
+  become: true
+  tasks:
+    - name: install http
+      yum:
+        name: httpd
+        state: present
